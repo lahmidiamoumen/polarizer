@@ -1,0 +1,419 @@
+{
+  "contractName": "Simple",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "x",
+          "type": "uint256"
+        }
+      ],
+      "name": "setVar",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"setVar\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Lahmi/Projects/blockchain/polarizer/contracts/Simple.sol\":\"Simple\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Lahmi/Projects/blockchain/polarizer/contracts/Simple.sol\":{\"keccak256\":\"0xd437906cb310c206f9d73eefb2a8d8c90adda9860563daa19a5d21da1d796eaa\",\"urls\":[\"bzz-raw://44c14752a85d6fb77b520498d68f7b5f3fbeebf66e01db795839bffbc82632ef\",\"dweb:/ipfs/QmPD3J7hiiyzn7xAC2Lcx9AZa5x33zBoiffPAswTDZtAN7\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060978061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80633a885d7914602d575b600080fd5b605660048036036020811015604157600080fd5b81019080803590602001909291905050506058565b005b806000819055505056fea265627a7a72315820ccbed49c7ed93fc11a4498d2190cb00a1a68ea6b68175d7848fb33c6bc7de61964736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80633a885d7914602d575b600080fd5b605660048036036020811015604157600080fd5b81019080803590602001909291905050506058565b005b806000819055505056fea265627a7a72315820ccbed49c7ed93fc11a4498d2190cb00a1a68ea6b68175d7848fb33c6bc7de61964736f6c63430005100032",
+  "sourceMap": "68:113:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:113:2;;;;;;;",
+  "deployedSourceMap": "68:113:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:113:2;;;;;;;;;;;;;;;;;;;114:61;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;114:61:2;;;;;;;;;;;;;;;;;:::i;:::-;;;166:1;155:8;:12;;;;114:61;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0 <0.8.0;\r\n\r\ncontract Simple{\r\n\r\n    uint variable;\r\n\r\n    function setVar(uint x) public{\r\n        variable = x;\r\n    } \r\n\r\n}\r\n\r\n",
+  "sourcePath": "C:/Users/Lahmi/Projects/blockchain/polarizer/contracts/Simple.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Lahmi/Projects/blockchain/polarizer/contracts/Simple.sol",
+    "exportedSymbols": {
+      "Simple": [
+        197
+      ]
+    },
+    "id": 198,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 184,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:31:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 197,
+        "linearizedBaseContracts": [
+          197
+        ],
+        "name": "Simple",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 186,
+            "name": "variable",
+            "nodeType": "VariableDeclaration",
+            "scope": 197,
+            "src": "92:13:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 185,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "92:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 195,
+              "nodeType": "Block",
+              "src": "144:31:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 193,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 191,
+                      "name": "variable",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 186,
+                      "src": "155:8:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 192,
+                      "name": "x",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 188,
+                      "src": "166:1:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "155:12:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 194,
+                  "nodeType": "ExpressionStatement",
+                  "src": "155:12:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 196,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setVar",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 189,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 188,
+                  "name": "x",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 196,
+                  "src": "130:6:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 187,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "130:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "129:8:2"
+            },
+            "returnParameters": {
+              "id": 190,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "144:0:2"
+            },
+            "scope": 197,
+            "src": "114:61:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 198,
+        "src": "68:113:2"
+      }
+    ],
+    "src": "33:152:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/Lahmi/Projects/blockchain/polarizer/contracts/Simple.sol",
+      "exportedSymbols": {
+        "Simple": [
+          197
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".0",
+            "<",
+            "0.8",
+            ".0"
+          ]
+        },
+        "id": 184,
+        "name": "PragmaDirective",
+        "src": "33:31:2"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            197
+          ],
+          "name": "Simple",
+          "scope": 198
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "variable",
+              "scope": 197,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 185,
+                "name": "ElementaryTypeName",
+                "src": "92:4:2"
+              }
+            ],
+            "id": 186,
+            "name": "VariableDeclaration",
+            "src": "92:13:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setVar",
+              "scope": 197,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "x",
+                      "scope": 196,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 187,
+                        "name": "ElementaryTypeName",
+                        "src": "130:4:2"
+                      }
+                    ],
+                    "id": 188,
+                    "name": "VariableDeclaration",
+                    "src": "130:6:2"
+                  }
+                ],
+                "id": 189,
+                "name": "ParameterList",
+                "src": "129:8:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 190,
+                "name": "ParameterList",
+                "src": "144:0:2"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 186,
+                              "type": "uint256",
+                              "value": "variable"
+                            },
+                            "id": 191,
+                            "name": "Identifier",
+                            "src": "155:8:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 188,
+                              "type": "uint256",
+                              "value": "x"
+                            },
+                            "id": 192,
+                            "name": "Identifier",
+                            "src": "166:1:2"
+                          }
+                        ],
+                        "id": 193,
+                        "name": "Assignment",
+                        "src": "155:12:2"
+                      }
+                    ],
+                    "id": 194,
+                    "name": "ExpressionStatement",
+                    "src": "155:12:2"
+                  }
+                ],
+                "id": 195,
+                "name": "Block",
+                "src": "144:31:2"
+              }
+            ],
+            "id": 196,
+            "name": "FunctionDefinition",
+            "src": "114:61:2"
+          }
+        ],
+        "id": 197,
+        "name": "ContractDefinition",
+        "src": "68:113:2"
+      }
+    ],
+    "id": 198,
+    "name": "SourceUnit",
+    "src": "33:152:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-02-23T08:15:45.607Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
