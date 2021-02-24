@@ -1,6 +1,6 @@
 <template>
   <el-row>
-    <el-col :span="8" :offset="8">
+    <el-col :span="14" :offset="5">
       <div class="grid-content bg-purple-dark"></div>
       <el-card shadow="hover">
         <table>
@@ -23,7 +23,6 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'ActiveAccount',
-
   computed: mapGetters('accounts', ['activeAccount', 'activeBalance'])
 }
 </script>

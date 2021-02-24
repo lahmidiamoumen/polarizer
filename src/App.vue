@@ -3,6 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <ActiveAccount/>
     <ContractData/>
+    <Authorized/>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
   <div v-else>
@@ -33,6 +34,8 @@
 import HelloWorld from './components/HelloWorld.vue'
 import ContractData from './components/ContractData.vue'
 import ActiveAccount from './components/ActiveAccount.vue'
+import Authorized from './components/Authorized.vue'
+
 import { mapGetters } from 'vuex'
 
 
@@ -42,7 +45,8 @@ export default {
   components: {
     HelloWorld,
     ActiveAccount,
-    ContractData
+    ContractData,
+    Authorized
   }
 }
 </script>
