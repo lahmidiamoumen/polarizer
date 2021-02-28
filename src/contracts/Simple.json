@@ -28,14 +28,14 @@
     "absolutePath": "/C/Users/Lahmi/Projects/blockchain/polarizer/contracts/Simple.sol",
     "exportedSymbols": {
       "Simple": [
-        611
+        717
       ]
     },
-    "id": 612,
+    "id": 718,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 598,
+        "id": 704,
         "literals": [
           "solidity",
           ">=",
@@ -54,19 +54,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 611,
+        "id": 717,
         "linearizedBaseContracts": [
-          611
+          717
         ],
         "name": "Simple",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 600,
+            "id": 706,
             "name": "variable",
             "nodeType": "VariableDeclaration",
-            "scope": 611,
+            "scope": 717,
             "src": "92:13:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -75,7 +75,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 599,
+              "id": 705,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "92:4:3",
@@ -89,25 +89,25 @@
           },
           {
             "body": {
-              "id": 609,
+              "id": 715,
               "nodeType": "Block",
               "src": "144:31:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 607,
+                    "id": 713,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 605,
+                      "id": 711,
                       "name": "variable",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 600,
+                      "referencedDeclaration": 706,
                       "src": "155:8:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -118,11 +118,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 606,
+                      "id": 712,
                       "name": "x",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 602,
+                      "referencedDeclaration": 708,
                       "src": "166:1:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -135,29 +135,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 608,
+                  "id": 714,
                   "nodeType": "ExpressionStatement",
                   "src": "155:12:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 610,
+            "id": 716,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "setVar",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 603,
+              "id": 709,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 602,
+                  "id": 708,
                   "name": "x",
                   "nodeType": "VariableDeclaration",
-                  "scope": 610,
+                  "scope": 716,
                   "src": "130:6:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -166,7 +166,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 601,
+                    "id": 707,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "130:4:3",
@@ -182,19 +182,19 @@
               "src": "129:8:3"
             },
             "returnParameters": {
-              "id": 604,
+              "id": 710,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "144:0:3"
             },
-            "scope": 611,
+            "scope": 717,
             "src": "114:61:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 612,
+        "scope": 718,
         "src": "68:113:3"
       }
     ],
@@ -205,7 +205,7 @@
       "absolutePath": "/C/Users/Lahmi/Projects/blockchain/polarizer/contracts/Simple.sol",
       "exportedSymbols": {
         "Simple": [
-          611
+          717
         ]
       }
     },
@@ -222,7 +222,7 @@
             ".0"
           ]
         },
-        "id": 598,
+        "id": 704,
         "name": "PragmaDirective",
         "src": "33:31:3"
       },
@@ -238,17 +238,17 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            611
+            717
           ],
           "name": "Simple",
-          "scope": 612
+          "scope": 718
         },
         "children": [
           {
             "attributes": {
               "constant": false,
               "name": "variable",
-              "scope": 611,
+              "scope": 717,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -261,12 +261,12 @@
                   "name": "uint",
                   "type": "uint256"
                 },
-                "id": 599,
+                "id": 705,
                 "name": "ElementaryTypeName",
                 "src": "92:4:3"
               }
             ],
-            "id": 600,
+            "id": 706,
             "name": "VariableDeclaration",
             "src": "92:13:3"
           },
@@ -280,7 +280,7 @@
                 null
               ],
               "name": "setVar",
-              "scope": 611,
+              "scope": 717,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -292,7 +292,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "x",
-                      "scope": 610,
+                      "scope": 716,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -305,17 +305,17 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 601,
+                        "id": 707,
                         "name": "ElementaryTypeName",
                         "src": "130:4:3"
                       }
                     ],
-                    "id": 602,
+                    "id": 708,
                     "name": "VariableDeclaration",
                     "src": "130:6:3"
                   }
                 ],
-                "id": 603,
+                "id": 709,
                 "name": "ParameterList",
                 "src": "129:8:3"
               },
@@ -326,7 +326,7 @@
                   ]
                 },
                 "children": [],
-                "id": 604,
+                "id": 710,
                 "name": "ParameterList",
                 "src": "144:0:3"
               },
@@ -351,11 +351,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 600,
+                              "referencedDeclaration": 706,
                               "type": "uint256",
                               "value": "variable"
                             },
-                            "id": 605,
+                            "id": 711,
                             "name": "Identifier",
                             "src": "155:8:3"
                           },
@@ -365,41 +365,41 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 602,
+                              "referencedDeclaration": 708,
                               "type": "uint256",
                               "value": "x"
                             },
-                            "id": 606,
+                            "id": 712,
                             "name": "Identifier",
                             "src": "166:1:3"
                           }
                         ],
-                        "id": 607,
+                        "id": 713,
                         "name": "Assignment",
                         "src": "155:12:3"
                       }
                     ],
-                    "id": 608,
+                    "id": 714,
                     "name": "ExpressionStatement",
                     "src": "155:12:3"
                   }
                 ],
-                "id": 609,
+                "id": 715,
                 "name": "Block",
                 "src": "144:31:3"
               }
             ],
-            "id": 610,
+            "id": 716,
             "name": "FunctionDefinition",
             "src": "114:61:3"
           }
         ],
-        "id": 611,
+        "id": 717,
         "name": "ContractDefinition",
         "src": "68:113:3"
       }
     ],
-    "id": 612,
+    "id": 718,
     "name": "SourceUnit",
     "src": "33:152:3"
   },
@@ -409,7 +409,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-02-24T12:31:49.549Z",
+  "updatedAt": "2021-02-28T10:31:07.917Z",
   "devdoc": {
     "methods": {}
   },

@@ -19,7 +19,7 @@
                 <el-button @click.prevent="resetForm('numberValidateForm')">Reset</el-button>
             </el-form-item>
         </el-form>
-        <div v-for="(cat,n) in authorized" :key="n">
+        <div v-for="(cat,n) in getAuthorizedAdd" :key="n">
             <p><span>{{cat}}</span></p>
             <el-divider></el-divider>
         </div>
@@ -31,27 +31,32 @@
 <script>
 import { mapGetters } from 'vuex';
   export default {
-    computed: mapGetters("drizzle", ["isDrizzleInitialized", "drizzleInstance"]),
-    mounted() {
-        if (localStorage.getItem('authorized')) {
-            try {
-                this.authorized = JSON.parse(localStorage.getItem('authorized'));
-            } catch(e) {
-                localStorage.removeItem('authorized');
-            }
-        }
+    computed: {
+        ...mapGetters('contracts',['getContractData']),
+        ...mapGetters("drizzle", ["isDrizzleInitialized", "drizzleInstance"]),
+
+         getAuthorizedAdd(){
+            return this.getContractData({
+                contract:'Election',
+                method: 'getAuthorized'
+            })
+        },
     },
+    created() {
+       this.$store.dispatch('drizzle/REGISTER_CONTRACT', {
+           contractName: 'Election',
+           method:'getAuthorized',
+           methodArgs:[],
+       });
+    },
+  
     data() {
       return {
-        authorized: [],
         authModel:{
             newAuthorize: ''
         },
     
       };
-    },
-    watch(){
-
     },
     methods: {
         onAuthorizeCall(){
@@ -66,19 +71,13 @@ import { mapGetters } from 'vuex';
                 return;
             }
             this.onAuthorizeCall()
-            this.authorized.push(this.authModel.newAuthorize);
             this.authModel.newAuthorize = '';
-            this.saveAuthorize()
             this.$notify({
                 title: 'Adress added!',
                 type: 'success',
                 message: 'Address added successfuly!',
                 duration: 5000
             })
-        },
-        saveAuthorize() {
-            const parsed = JSON.stringify(this.authorized);
-            localStorage.setItem('authorized', parsed);
         },
         submitForm(formName) {
             this.$refs[formName].validate((valid) => {

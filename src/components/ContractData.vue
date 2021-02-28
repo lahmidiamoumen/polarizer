@@ -6,31 +6,22 @@
         <div slot="header">
             <span>Proposals</span>
         </div>
-        <table>
+        <table v-for="(contractName, index) in contractNames" :key="index">
             <tr>
-                <td><div>{{convert(contractNames[0])}}</div></td>
-                <td>{{contractVotes[0]}}</td>
-                <td><el-button type="primary" size="small" plain :loading="loading" @click="onVote(0)" :disabled="voted">Vote</el-button></td>
+                <td><div>{{convert(contractName)}}</div></td>
+                <td>{{contractVotes[index]}}</td>
+                <td><el-button type="primary" size="small" plain :loading="loading" @click="onVote(index)" :disabled="voted">Vote</el-button></td>
             </tr>
+        </table>
+
+        <table v-for="(proposal, index) in contractProposals" :key="index">
             <tr>
-                <td><div>{{convert(contractNames[1])}}</div></td>
-                <td>{{contractVotes[1]}}</td>
-                <td><el-button type="primary" size="small" :loading="loading" plain @click="onVote(1)" :disabled="voted">Vote</el-button></td>
-            </tr>
-            <tr>
-                <td><div>{{convert(contractNames[2])}}</div></td>
-                <td>{{contractVotes[2]}}</td>
-                <td><el-button type="primary" size="small" :loading="loading" plain @click="onVote(2)" :disabled="voted">Vote</el-button></td>
+                <td>{{proposal.description}}</td>
+                <td>{{proposal.condidate_name}}</td>
+                <td>{{proposal.condidate_voteCount}}</td>
             </tr>
         </table>
         
-        
-        <!-- <drizzle-contract
-            contractName="Election"
-            method="condidates"
-            label="Condidate"
-            :methodArgs="[0]"
-            /> -->
     </el-card>
     </el-col>
 </el-row>
@@ -54,6 +45,11 @@ export default {
             method:'getCondidateVotes',
             methodArgs:[],
         });
+        this.$store.dispatch('drizzle/REGISTER_CONTRACT', {
+            contractName: contract,
+            method:'getproposals',
+            methodArgs:[],
+        });
     },
     computed:{
         ...mapGetters('contracts',['getContractData']),
@@ -71,9 +67,15 @@ export default {
                 method: 'getCondidateVotes'
             })
         },
+        contractProposals(){
+            return this.getContractData({
+                contract:contract,
+                method: 'getproposals'
+            })
+        },
     },
     methods: {
-        
+    
         onVote(index){
             this.drizzleInstance
             .contracts[contract]
@@ -88,7 +90,9 @@ export default {
     data() {
         return {
             loading: false,
-            voted: false
+            voted: false,
+            condidates:[],
+            description: ''
         }
     }
     

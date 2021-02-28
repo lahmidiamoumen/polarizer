@@ -4,7 +4,7 @@
     <ActiveAccount/>
     <ContractData/>
     <Authorized/>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Proposals/>
   </div>
   <div v-else>
         <el-container style="margin: 0 auto">
@@ -14,11 +14,10 @@
           <el-container >
             <el-aside width="200px">
               <!-- Aside content -->
-              Connection to blockchain
             </el-aside>
             <el-container >
               <el-main height="">
-                  <el-button type="primary" size="default" v-loading.fullscreen.lock="true"></el-button>             
+                  <el-button type="text" size="mini" v-loading.fullscreen.lock="true" ></el-button>             
               </el-main>
               <el-footer height="">
                 <!-- Footer content -->
@@ -31,8 +30,8 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import ContractData from './components/ContractData.vue'
+import Proposals from './components/Proposals.vue'
 import ActiveAccount from './components/ActiveAccount.vue'
 import Authorized from './components/Authorized.vue'
 
@@ -43,7 +42,7 @@ export default {
   name: 'App',
   computed: mapGetters('drizzle', ['isDrizzleInitialized']),
   components: {
-    HelloWorld,
+    Proposals,
     ActiveAccount,
     ContractData,
     Authorized
