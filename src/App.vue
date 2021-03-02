@@ -1,32 +1,35 @@
 <template>
-  <div v-if="isDrizzleInitialized" id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <ActiveAccount/>
-    <Proposals/>
-    <ContractData/>
-    <Authorized/>
-  </div>
-  <div v-else>
-        <el-container style="margin: 0 auto">
-          <el-header height="">
-            <!-- Header content -->
-          </el-header>
-          <el-container >
-            <el-aside width="200px">
-              <!-- Aside content -->
-            </el-aside>
-            <el-container >
-              <el-main height="">
-                  <el-button type="text" size="mini" v-loading.fullscreen.lock="true" ></el-button>             
-              </el-main>
-              <el-footer height="">
-                <!-- Footer content -->
-              </el-footer>
-            </el-container>
-          </el-container>
-        </el-container>
-        </div>
+  <v-app v-if="isDrizzleInitialized">
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+     <v-btn
+        href="#"
+        text
+      >
+        <span class="mr-2">Polarizer</span>
+      </v-btn>
+      <div class="d-flex align-center"></div>
 
+      <v-spacer></v-spacer>
+
+     
+    </v-app-bar>
+
+    <v-main>
+      <br>
+      <br>
+      <ActiveAccount/>
+        <Proposals/>
+        <ContractData/>
+        <Authorized/>
+    </v-main>
+  </v-app>
+  <v-app  v-else>
+    Waiting...
+  </v-app>
 </template>
 
 <script>
@@ -34,9 +37,7 @@ import ContractData from './components/ContractData.vue'
 import Proposals from './components/Proposals.vue'
 import ActiveAccount from './components/ActiveAccount.vue'
 import Authorized from './components/Authorized.vue'
-
 import { mapGetters } from 'vuex'
-
 
 export default {
   name: 'App',
@@ -48,15 +49,5 @@ export default {
     Authorized
   }
 }
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+</script>

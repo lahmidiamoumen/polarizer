@@ -3,7 +3,6 @@ pragma solidity >=0.4.22 <0.9.0;
 pragma experimental ABIEncoderV2;
 
 
-
 /// @title A title that should describe the contract/interface
 /// @author L.Moumen
 /// @notice Explain to an end user what this does
@@ -29,13 +28,13 @@ contract Election{
         bytes32 name;
         uint256 voteCount;
     }
+
     string name;
     address public owner;
     mapping(address => Voter) public voters;
     address[] authorized;
     Proposals[] internal proposals;
     uint public auctionEnd;
-
 
 
     event Voted(string _message);

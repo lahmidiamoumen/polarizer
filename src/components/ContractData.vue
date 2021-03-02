@@ -26,11 +26,11 @@
                         <td>Creator</td>
                         <td>{{porp[0]}}</td>
                     </tr>
-                        <tr v-for="(votes, index2) in porp[2]" :key="index2">
-                            <td>  {{convert(porp[3][index2])}}</td>
-                            <td>{{porp[2][index2]}}</td>
-                            <td><el-button @click="onVote(index,index2)" size="small" >Vote</el-button></td>
-                        </tr>   
+                    <tr v-for="(votes, index2) in porp[2]" :key="index2">
+                        <td>  {{convert(porp[3][index2])}}</td>
+                        <td>{{porp[2][index2]}}</td>
+                        <td><el-button @click="onVote(index,index2)" size="small" >Vote</el-button></td>
+                    </tr>   
                 </table>
                 
  

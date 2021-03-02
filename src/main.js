@@ -8,6 +8,8 @@ import drizzleOptions from './drizzleOptions'
 import locale from 'element-ui/lib/locale/lang/en'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import vuetify from './plugins/vuetify';
+import './registerServiceWorker'
 
 Vue.use(ElementUI, { locale })
 Vue.use(Vuex)
@@ -22,5 +24,6 @@ Vue.config.productionTip = false
 
 new Vue({
   store,
-  render: h => h(App),
+  vuetify,
+  render: h => h(App)
 }).$mount('#app')
