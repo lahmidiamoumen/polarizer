@@ -1,48 +1,51 @@
 <template>
-<div>
-    <el-divider></el-divider>
-        <el-row>
-            <el-col :span="20"><p>Candidates</p></el-col>
-            <el-col :span="4" right>
-                <el-button type="text" @click="dialogVisible = true">New Proposal</el-button>
-            </el-col>
-        </el-row>
-        <el-dialog
-            title="New proposal"
-            :visible.sync="dialogVisible"
-            width="30%">
-            <el-input
-                type="textarea"
-                :rows="2"
-                placeholder="description..."
-                v-model="poroposals.descption">
-            </el-input>
-            <br>
-            <br>
-            
-            <div v-for="(con, index) in poroposals.candidate" :key="index">
-                <br>
-                <el-row :gutter="10">
-                    <el-col :span="21">
-                            <el-input placeholder="condidate suggestion..." v-model="propos[index]" clearable></el-input>
-                    </el-col>
-                    <el-col :span="1">
-                        <el-button type="danger" icon="el-icon-delete" size="default" @click="removeOption(index)">
-                        </el-button>
-                    </el-col>
-                </el-row>
-            </div>
-            <el-row  :gutter="10">
-                <br>
-                   <el-button type="primary" size="default" icon="el-icon-plus" width="100" plain @click="addOption(index)" align-right>
-                       Add new condidate
+<div class="app-container">
+    <el-row :gutter="20">
+        <el-col :span="16" :offset="4">
+            <el-divider></el-divider>
+        </el-col>
+    </el-row>    
+    <el-row :gutter="20">
+        <el-col :span="16" :offset="4">
+            <el-button plain  @click="dialogVisible = true">New Proposal</el-button>
+        </el-col>
+    </el-row>
+    
+    
+   
+    
+    <el-dialog
+        title="New proposal"
+        :visible.sync="dialogVisible"
+        width="30%">
+        <h5 style="float: left;margin: 6px; margin-left:6px">Describe your proposal</h5>
+        <el-input
+            type="textarea"
+            :rows="3"
+            placeholder="write somthing..."
+            v-model="poroposals.description">
+        </el-input>
+        <div v-for="(con, index) in poroposals.candidate" :key="index+'_'+con.key">
+            <el-row style="marging-top: 8px" :gutter="6">
+                <h5 style="float: left;margin: 6px; margin-left:6px"> Poroposal suggestion {{index + 1}} </h5>    
+                <el-col :span="20">
+                    <el-input placeholder="..." v-model="con.value" clearable></el-input>
+                </el-col>
+                <el-col :span="2">
+                    <el-button type="danger" icon="el-icon-delete" size="default" :disabled="index < 2" @click="removeOption(index)">
                     </el-button>
+                </el-col>
             </el-row>
-            <span slot="footer" class="dialog-footer">
-                <el-button @click="dialogVisible = false">Cancel</el-button>
-                <el-button type="primary" @click="addProposals">Confirm</el-button>
-            </span>
-        </el-dialog>
+        </div>
+        <br>
+        <el-button type="primary" size="default" icon="el-icon-plus" style="width: 100%" plain @click="addOption(index)" >
+            Add new condidate
+        </el-button>
+        <span slot="footer" class="dialog-footer">
+            <el-button @click="dialogVisible = false">Cancel</el-button>
+            <el-button type="primary" @click="addProposals">Confirm</el-button>
+        </span>
+    </el-dialog>
 </div>
 
 </template>
@@ -54,36 +57,51 @@ export default {
     name:'Proposals',
     computed:{
         ...mapGetters("drizzle", ["drizzleInstance"]),
+        
     },
     data(){
         return{
             dialogVisible:false,
-            propos: [],
+            proposBt : [],
             poroposals: {
                 description: '',
-                candidate: ['']
+                candidate: [{kye: 12222,value: ''},{kye: 123312,value: ''}]
             }
         }
     },
     methods: {
+        fromAscii(value) {
+            return this.drizzleInstance.web3.utils.utf8ToHex(value)
+        },
+        pushToByte32(){
+            for (let i = 0; i < this.poroposals.candidate.length; i++) {
+               this.proposBt.push(this.fromAscii(this.poroposals.candidate[i].value))
+            }
+            console.log(this.proposBt)
+        },
         addProposals(){
+            this.pushToByte32()
             this.drizzleInstance
             .contracts['Election']
             .methods['addProposals']
-            .cacheSend(this.propos, this.poroposals.description)
+            .cacheSend(this.proposBt, this.fromAscii(this.poroposals.description))
+            // reset
+            this.poroposals.description = ''
+            this.poroposals.candidate = [{kye: 12222,value: ''},{kye: 123312,value: ''}]
             this.dialogVisible = false
+            this.proposBt = []
         },
         addOption() {
-            this.poroposals.candidate.push('');
-            },
-            removeOption(index) {
-                if(this.poroposals.candidate.length<=2) {
-                    alert('We need at least two fields')
-                } else {
-                    this.poroposals.candidate.splice(index, 1);
-                }
-            },  
+            this.poroposals.candidate.push({key: Date.now(),value:''});
         },
+        removeOption(index) {
+            if(this.poroposals.candidate.length<=2) {
+                alert('We need at least two fields')
+            } else {
+                this.poroposals.candidate.splice(index, 1);
+            }
+        },  
+    },
         
 }
 </script>

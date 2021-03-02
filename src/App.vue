@@ -2,9 +2,9 @@
   <div v-if="isDrizzleInitialized" id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <ActiveAccount/>
+    <Proposals/>
     <ContractData/>
     <Authorized/>
-    <Proposals/>
   </div>
   <div v-else>
         <el-container style="margin: 0 auto">
