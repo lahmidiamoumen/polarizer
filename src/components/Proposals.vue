@@ -25,7 +25,7 @@
             placeholder="write somthing..."
             v-model="poroposals.description">
         </el-input>
-        <div v-for="(con, index) in poroposals.candidate" :key="index+'_'+con.key">
+        <div v-for="con in poroposals.candidate" :key="'_'+con.key">
             <el-row style="marging-top: 8px" :gutter="6">
                 <h5 style="float: left;margin: 6px; margin-left:6px"> Poroposal suggestion {{index + 1}} </h5>    
                 <el-col :span="20">

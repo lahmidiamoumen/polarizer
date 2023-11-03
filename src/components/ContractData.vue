@@ -33,8 +33,6 @@
                     </tr>   
                 </table>
                 
- 
-                
             </el-card>
         </div>
         
@@ -59,8 +57,8 @@ export default {
     },
     
     computed:{
-        ...mapGetters('contracts',['getContractData']),
         ...mapGetters("drizzle", ["isDrizzleInitialized", "drizzleInstance"]),
+        ...mapGetters('contracts',['getContractData']),
 
         contractProposals (){            
             return this.getContractData({

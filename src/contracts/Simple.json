@@ -17,15 +17,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"setVar\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Lahmi/Projects/blockchain/polarizer/contracts/Simple.sol\":\"Simple\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Lahmi/Projects/blockchain/polarizer/contracts/Simple.sol\":{\"keccak256\":\"0xd437906cb310c206f9d73eefb2a8d8c90adda9860563daa19a5d21da1d796eaa\",\"urls\":[\"bzz-raw://44c14752a85d6fb77b520498d68f7b5f3fbeebf66e01db795839bffbc82632ef\",\"dweb:/ipfs/QmPD3J7hiiyzn7xAC2Lcx9AZa5x33zBoiffPAswTDZtAN7\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b5060978061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80633a885d7914602d575b600080fd5b605660048036036020811015604157600080fd5b81019080803590602001909291905050506058565b005b806000819055505056fea265627a7a72315820ccbed49c7ed93fc11a4498d2190cb00a1a68ea6b68175d7848fb33c6bc7de61964736f6c63430005100032",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80633a885d7914602d575b600080fd5b605660048036036020811015604157600080fd5b81019080803590602001909291905050506058565b005b806000819055505056fea265627a7a72315820ccbed49c7ed93fc11a4498d2190cb00a1a68ea6b68175d7848fb33c6bc7de61964736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"setVar\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Simple.sol\":\"Simple\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Simple.sol\":{\"keccak256\":\"0xd437906cb310c206f9d73eefb2a8d8c90adda9860563daa19a5d21da1d796eaa\",\"urls\":[\"bzz-raw://44c14752a85d6fb77b520498d68f7b5f3fbeebf66e01db795839bffbc82632ef\",\"dweb:/ipfs/QmPD3J7hiiyzn7xAC2Lcx9AZa5x33zBoiffPAswTDZtAN7\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060978061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80633a885d7914602d575b600080fd5b605660048036036020811015604157600080fd5b81019080803590602001909291905050506058565b005b806000819055505056fea265627a7a72315820a4e6e7e09b98adf09ab638cd64282747b727cc319568d1cf5d990dd42d07218264736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80633a885d7914602d575b600080fd5b605660048036036020811015604157600080fd5b81019080803590602001909291905050506058565b005b806000819055505056fea265627a7a72315820a4e6e7e09b98adf09ab638cd64282747b727cc319568d1cf5d990dd42d07218264736f6c63430005100032",
   "sourceMap": "68:113:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:113:3;;;;;;;",
   "deployedSourceMap": "68:113:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:113:3;;;;;;;;;;;;;;;;;;;114:61;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;114:61:3;;;;;;;;;;;;;;;;;:::i;:::-;;;166:1;155:8;:12;;;;114:61;:::o",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0 <0.8.0;\r\n\r\ncontract Simple{\r\n\r\n    uint variable;\r\n\r\n    function setVar(uint x) public{\r\n        variable = x;\r\n    } \r\n\r\n}\r\n\r\n",
-  "sourcePath": "C:/Users/Lahmi/Projects/blockchain/polarizer/contracts/Simple.sol",
+  "sourcePath": "D:\\Node\\polarizer\\contracts\\Simple.sol",
   "ast": {
-    "absolutePath": "/C/Users/Lahmi/Projects/blockchain/polarizer/contracts/Simple.sol",
+    "absolutePath": "project:/contracts/Simple.sol",
     "exportedSymbols": {
       "Simple": [
         594
@@ -202,7 +202,7 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/C/Users/Lahmi/Projects/blockchain/polarizer/contracts/Simple.sol",
+      "absolutePath": "project:/contracts/Simple.sol",
       "exportedSymbols": {
         "Simple": [
           594
@@ -408,8 +408,8 @@
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.3.4",
-  "updatedAt": "2021-03-02T13:52:45.480Z",
+  "schemaVersion": "3.4.5",
+  "updatedAt": "2022-03-06T08:59:44.263Z",
   "devdoc": {
     "methods": {}
   },

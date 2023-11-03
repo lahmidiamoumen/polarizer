@@ -5,7 +5,7 @@ const options = {
     block: false,
     fallback: {
       type: 'HTTP',
-      url: 'HTTP://127.0.0.1:7545'
+      url: 'HTTP://127.0.0.1:8545'
     } 
   },
   contracts: [Election],
